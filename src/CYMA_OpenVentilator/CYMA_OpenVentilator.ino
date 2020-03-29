@@ -22,8 +22,6 @@
  Authors:
  Eduardo Abdou    eduardo@abdou.com.br
 
- For more details, see:
- http://wiki.nottinghack.org.uk/wiki/Vending_Machine/Cashless_Device_Implementation
  */
 
 #include <LiquidCrystal.h>
