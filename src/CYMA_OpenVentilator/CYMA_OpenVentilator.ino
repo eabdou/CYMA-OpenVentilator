@@ -56,7 +56,7 @@ int adc_key_in  = 0;
 int gState = 1;
 
 //switch delay time
-int gDelaySwitch = 1000;
+int gDelaySwitch = 200;
 int gDelayPressDisplay = 400;
 int gDisplayMode = 0;
 
@@ -71,6 +71,7 @@ int gBpmSet = 0;
 
 float gDelayActivation = 0;
 float gLastActivation = 0;
+float gSwitchActivation = 0;
 float gLastPressureDisplay = 0;
 
 void setup() {
@@ -164,16 +165,21 @@ void runningMode() {
 
   if (digitalRead(SWITCH_PIN) == LOW) {
     gState = 21;
+    gSwitchActivation = millis();
 
     Serial.println("ENTERING STOP STATE");
   }
 }
 
 void stopMode() {
-  motorOff();
-  gState = 1;
 
-  Serial.println("ENTERING WAITING STATE");
+  if (millis() > gSwitchActivation + gDelaySwitch){
+    gState = 1;
+    motorOff();
+    Serial.println("ENTERING WAITING STATE");
+  }
+
+  
 }
 
 void motorOn(){
