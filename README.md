@@ -1,12 +1,13 @@
 # CYMA-OpenVentilator
-Ultra low cost mechanical ventilator to be used in emergency situations, in the lack of a proper one.
+
+Projeto conceito de respirador manual automatizado.
+
+Página do projeto: http://www.abdou.com.br/projeto-respirador
 
 
-Created by the CYMA DIGITAL team. 
-http://www.cymadigital.com.br
 
-First video: https://www.youtube.com/watch?v=2h9TjVAdFiA
+# ATENÇÃO
 
+Este é um projeto em desenvolvimento, ainda não está pronto !
 
-Update: https://youtu.be/N0TdbLMdAJA
-
+Não deve ser usado em pacientes reais sem antes ser validado e autorizado pelas autoridades competentes.
